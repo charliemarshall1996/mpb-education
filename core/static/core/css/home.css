@@ -1,0 +1,9 @@
+
+#hero-home {
+    background-image: 
+        linear-gradient(rgba(217, 217, 217, 0.6), rgba(217, 217, 217, 0.6)),
+        url('/static/core/images/hero.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}

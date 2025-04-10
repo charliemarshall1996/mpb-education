@@ -1,4 +1,7 @@
 
+.hero-section {
+    min-height: 100vh;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto Condensed", sans-serif;
@@ -14,8 +17,4 @@ main {
 
 .modal.fade .modal-dialog {
     transform: none !important;
-}
-
-.container-content {
-    min-height: 85vh;
 }

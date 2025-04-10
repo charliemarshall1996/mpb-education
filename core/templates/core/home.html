@@ -20,9 +20,28 @@
 <link rel="canonical" href="#">
 {% endblock %}
 
-
+{% block styles %}
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="container-fluid container-content px-0">
+
+
+<div class="container-fluid px-0">
+    <section class="py-5" id="hero-home">
+        <div class="container container-content align-content-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-1 mb-4">MPB Education</h1>
+                    <p class="lead mb-4 text-tertiary">Learn smarter, not harder</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <a class="btn btn-tertiary" href="#">Get in touch!</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}

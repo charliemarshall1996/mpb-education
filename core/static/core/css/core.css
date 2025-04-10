@@ -16,6 +16,6 @@ main {
     transform: none !important;
 }
 
-.container-content {
+.container-content-full {
     min-height: 85vh;
 }

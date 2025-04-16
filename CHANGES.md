@@ -13,3 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - core app
 - home.html
 - home.html hero
+- mpbadmin app
+- curricula app
+- login view
+- subject model
+- subject views
+- term model
+- term views

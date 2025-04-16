@@ -17,3 +17,16 @@ class Subject(models.Model):
 
     def __str__(self):  # noqa: D105
         return self.name
+
+
+class Term(models.Model):
+    """Model representation of a subjects term."""
+    subject = models.ForeignKey(
+        Subject, on_delete=models.CASCADE, related_name='terms')
+    start_date = models.DateField()
+    end_date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):  # noqa: D105
+        return f"{self.subject.name} | {self.start_date} - {self.end_date}"

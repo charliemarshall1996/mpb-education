@@ -6,4 +6,6 @@
     background-size: cover; /* Ensures the image covers the element */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%;
+    min-height: 85vh;
 }

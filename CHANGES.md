@@ -25,3 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - guardian model
 - testimonial model
 - students views
+- tutorials app
+- Group model
+- Tutorial model
+- group views
+- tutorial views

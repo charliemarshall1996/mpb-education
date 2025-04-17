@@ -34,5 +34,23 @@ urlpatterns = [
     path("student/create", views.StudentCreateView.as_view(),
          name="student-create"),
     path("student/delete/<int:pk>",
-         views.StudentDeleteView.as_view(), name="student-delete")
+         views.StudentDeleteView.as_view(), name="student-delete"),
+
+    # Testimonial Views
+    path("testimonials", views.TestimonialListView.as_view(),
+         name="testimonial-list"),
+    path("testimonial/<int:pk>", views.TestimonialDetailView.as_view(),
+         name="testimonial-detail"),
+    path(
+        "testimonial/update/<int:pk>",
+        views.TestimonialUpdateView.as_view(),
+        name="testimonial-update",
+    ),
+    path("testimonial/create", views.TestimonialCreateView.as_view(),
+         name="testimonial-create"),
+    path("testimonial/delete/<int:pk>",
+         views.TestimonialDeleteView.as_view(), name="testimonial-delete"),
+
+
+
 ]

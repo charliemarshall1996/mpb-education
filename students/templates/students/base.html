@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'mpbadmin/base.html' %}
+{% block subnav %}
+<nav class="navbar navbar-expand-lg bg-secondary navbar-dark px-5">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSubNav" aria-controls="navbarSubNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="bi bi-list"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSubNav">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item d-none d-md-flex">
+                <a class="nav-link" href="{% url 'students:guardian-list' %}">Guardians</a>
+            </li>
+            <li class="nav-item d-flex d-md-none">
+                <a class="nav-link" href="{% url 'students:guardian-list' %}">Guardians</a>
+            </li>
+            <li class="nav-item d-none d-md-flex">
+                <a class="nav-link" href="{% url 'students:student-list' %}">Students</a>
+            </li>
+            <li class="nav-item d-flex d-md-none">
+                <a class="nav-link" href="{% url 'students:student-list' %}">Students</a>
+            </li>
+            <li class="nav-item d-none d-md-flex">
+                <a class="nav-link" href="{% url 'students:testimonial-list' %}">Testimonials</a>
+            </li>
+            <li class="nav-item d-flex d-md-none">
+                <a class="nav-link" href="{% url 'students:testimonial-list' %}">Testimonials</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+{% block pagecontent %}
+{% endblock %}
+{% endblock %}

@@ -89,3 +89,39 @@ class StudentUpdateView(generic.UpdateView, LoginRequiredMixin):
 class StudentDeleteView(generic.DeleteView, LoginRequiredMixin):
     model = models.Student
     success_url = urls.reverse_lazy("students:student-list")
+
+# Testimonials
+
+
+class TestimonialListView(generic.ListView, LoginRequiredMixin):
+    model = models.Testimonial
+    paginate_by = 10
+    ordering = ["-date"]
+
+
+class TestimonialDetailView(generic.DetailView, LoginRequiredMixin):
+    model = models.Testimonial
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class TestimonialCreateView(generic.CreateView, LoginRequiredMixin):
+    model = models.Testimonial
+    form_class = forms.TestimonialForm
+    success_url = urls.reverse_lazy("students:testimonial-list")
+
+
+class TestimonialUpdateView(generic.UpdateView, LoginRequiredMixin):
+    model = models.Testimonial
+    form_class = forms.TestimonialForm
+
+    def get_success_url(self):
+        # Redirect to the detail view of the updated Subject
+        return urls.reverse("students:testimonial-detail", kwargs={"pk": self.object.pk})
+
+
+class TestimonialDeleteView(generic.DeleteView, LoginRequiredMixin):
+    model = models.Testimonial
+    success_url = urls.reverse_lazy("students:testimonial-list")

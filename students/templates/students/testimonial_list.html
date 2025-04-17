@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-{% extends "curricula/base.html" %}
+{% extends 'students/base.html' %}
 {% load static %}
 {% load url_replace %}
 {% block pagecontent %}
 <div class="container">
     <div class="row justify-content-center text-center py-3">
         <div class="col-10">
-            <h1>Subjects</h1>
+            <h1>Testimonials</h1>
         </div>
     </div>
 
     <div class="row justify-content-center py-3">
         <div class="col-10">
-            <a href="{% url 'curricula:subject-create' %}" class="btn btn-primary">Create subject</a>
+            <a href="{% url 'students:testimonial-create' %}" class="btn btn-primary">Create testimonial</a>
         </div>
     </div>
 
@@ -21,15 +21,18 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Name</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for subject in object_list %}
-                    
+                    {% for testimonial in object_list %}
                         <tr class="position-relative">
-                            <td>{{ subject.name }}</td>
-                            <td><a href="{% url 'curricula:subject-detail' subject.pk %}" class="stretched-link"></a></td>
+                            <td>{{ testimonial.guardian.first_name }}</td>
+                            <td>{{ testimonial.guardian.last_name }}</td>
+                            <td>{{ testimonial.date|date:"D d m Y" }}</td>
+                            <td><a href="{% url 'students:testimonial-detail' testimonial.pk %}" class="stretched-link"></a></td>
                         </tr>
                     {% endfor %}
                 </tbody>

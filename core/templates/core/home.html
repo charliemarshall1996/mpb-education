@@ -52,31 +52,19 @@
                     <h2>Student Testimonials</h2>
                 </div>
             </div>
+            
             <div class="row g-4">
+                {% for t in testimonials %}
                 <div class="col-4">
                     <div class="card align-content-center p-2">
                         <div class="card-body">
-                            <h3>"Quote"</h3>
-                            <p>John Doe</p>
+                            <h3>"{{ t.quote }}"</h3>
+                            <em>{{ t.date|date:"D d m Y" }}</em>
+                            <p>{{ t.guardian.first_name }} {{ t.guardian.last_name }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="card align-content-center p-2">
-                        <div class="card-body">
-                            <h3>"Quote"</h3>
-                            <p>Jane Doe</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card align-content-center p-2">
-                        <div class="card-body">
-                            <h3>"Quote"</h3>
-                            <p>Janet Doe</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

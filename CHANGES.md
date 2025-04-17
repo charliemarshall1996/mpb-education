@@ -20,3 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - subject views
 - term model
 - term views
+- students app
+- student model
+- guardian model
+- testimonial model
+- students views

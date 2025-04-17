@@ -10,5 +10,6 @@ urlpatterns = [
     path('', include('core.urls')),
     path("contact/", include("django_contact_form.urls")),
     path('curricula/', include('curricula.urls')),
-    path('students/', include('students.urls'))
+    path('students/', include('students.urls')),
+    path('tutorials/', include('tutorials.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-{% extends "curricula/base.html" %}
+{% extends 'tutorials/base.html' %}
 {% load static %}
 {% load url_replace %}
 {% block pagecontent %}
 <div class="container">
     <div class="row justify-content-center text-center py-3">
         <div class="col-10">
-            <h1>Terms</h1>
+            <h1>Tutorial</h1>
         </div>
     </div>
 
     <div class="row justify-content-center py-3">
         <div class="col-10">
-            <a href="{% url 'curricula:term-create' %}" class="btn btn-primary">Create Term</a>
+            <a href="{% url 'tutorials:tutorial-create' %}" class="btn btn-primary">Create Tutorial</a>
         </div>
     </div>
 
@@ -22,18 +22,13 @@
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
-                        <th scope="col">Start Date</th>
-                        <th scope="col">End Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for term in object_list %}
-                    
+                    {% for tutorial in object_list %}
                         <tr class="position-relative">
-                            <td>{{ term.subject.name }}</td>
-                            <td>{{ term.start_date|date:"D d m Y" }}</td>
-                            <td>{{ term.end_date|date:"D d m Y" }}</td>
-                            <td><a href="{% url 'curricula:term-detail' term.pk %}" class="stretched-link"></a></td>
+                            <td>{{ tutorial.name }}</td>
+                            <td><a href="{% url 'tutorials:tutorial-detail' tutorial.pk %}" class="stretched-link"></a></td>
                         </tr>
                     {% endfor %}
                 </tbody>

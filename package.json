@@ -1,6 +1,29 @@
 {
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.5",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "sass": "^1.86.3"
+  },
+  "scripts": {
+    "lint": "eslint . && stylelint '**/*.css'",
+    "format": "prettier --write .",
+    "build:css": "postcss static/styles/*.css -d static/styles/min/",
+    "build:js": "esbuild static/scripts/main.js --bundle --minify --outdir=static/scripts/min/",
+    "optimize:images": "imagemin static/images/* --out-dir=static/images/optimized",
+    "build": "npm run format && npm run lint && npm run build:css && npm run build:js && npm run optimize:images"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.26.0",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "terser": "^5.39.0"
   }
 }

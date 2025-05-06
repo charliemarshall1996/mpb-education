@@ -1,56 +1,63 @@
-<!DOCTYPE html>
-{% extends "curricula/base.html" %}
-{% load static %}
-{% block pagecontent %}
+<!doctype html>
+{% extends "curricula/base.html" %} {% load static %} {% block pagecontent %}
 <div class="container">
-    <div class="row justify-content-center text-center py-3">
-        <div class="col-10">
-            <h1 class="text-primary">{{ object.subject.name }} | {{ object.start_date }} - {{ object.end_date }}</h1>
-        </div>
+  <div class="row justify-content-center text-center py-3">
+    <div class="col-10">
+      <h1 class="text-primary">
+        {{ object.subject.name }} | {{ object.start_date }} - {{ object.end_date
+        }}
+      </h1>
     </div>
-    <div class="row justify-content-center text-center">
-        <div class="col-10">
-            <a class="btn btn-primary mx-3" href="{% url 'curricula:term-update' object.pk  %}">Update</a>
-            <a class="btn btn-primary mx-3" href="{% url 'curricula:term-delete' object.pk %}">Delete</a>
-        </div>
+  </div>
+  <div class="row justify-content-center text-center">
+    <div class="col-10">
+      <a
+        class="btn btn-primary mx-3"
+        href="{% url 'curricula:term-update' object.pk  %}"
+        >Update</a
+      >
+      <a
+        class="btn btn-primary mx-3"
+        href="{% url 'curricula:term-delete' object.pk %}"
+        >Delete</a
+      >
     </div>
-    <div class="row justify-content-center">
-        <div class="col-10">
-            <a class="btn btn-primary" href="{% url 'curricula:term-update' object.pk %}">Update</a>
-        </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <a
+        class="btn btn-primary"
+        href="{% url 'curricula:term-update' object.pk %}"
+        >Update</a
+      >
     </div>
+  </div>
 
-    <div class="row justify-content-center py-3">
-        <div class="col-3">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Tutorials</h2>
-                </div>
-                <div class="card-body">
-                    
-                </div>
-            </div>
+  <div class="row justify-content-center py-3">
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <h2>Tutorials</h2>
         </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Groups</h2>
-                </div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Students</h2>
-                </div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
+        <div class="card-body"></div>
+      </div>
     </div>
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <h2>Groups</h2>
+        </div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <h2>Students</h2>
+        </div>
+        <div class="card-body"></div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

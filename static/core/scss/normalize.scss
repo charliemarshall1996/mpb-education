@@ -1,33 +1,36 @@
-
 @import "../../../../node_modules/bootstrap/scss/_functions.scss";
 @import "../../../../node_modules/bootstrap/scss/_variables.scss";
 
-$primary: #284B63;   // Vibrant Tech Blue 
+$primary: #284b63; // Vibrant Tech Blue
 $secondary: #353535; // Gunmetal Gray
-$tertiary: #3C6E71;  // Charcoal Black
-$light: #FFFFFF;     // Soft White
-$dark: #353535;      // Charcoal Black (Replacing Bootstrap's Default Dark)
+$tertiary: #3c6e71; // Charcoal Black
+$light: #ffffff; // Soft White
+$dark: #353535; // Charcoal Black (Replacing Bootstrap's Default Dark)
 $body: $light;
 
 $display: "Roboto Condensed", sans-serif;
 $lead: "Roboto", sans-serif;
 // merge with existing $theme-colors map
-$theme-colors: map-merge($theme-colors, (
-  "primary": $primary,
-  "secondary": $secondary,
-  "tertiary": $tertiary,
-  "light": $light,
-  "dark": $dark,
-  "bg-body": $body,
-));
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "light": $light,
+    "dark": $dark,
+    "bg-body": $body,
+  )
+);
 
 // Step 1: Import Bootstrap (if not already imported)
 @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Step 2: Define your custom font variables
-$font-family-display: 'Roboto Condensed', sans-serif; // Replace with your desired display font
-$font-family-lead: 'Roboto', sans-serif;  // Replace with your desired lead font
-$font-family-base: 'Roboto', sans-serif;
+$font-family-display:
+  "Roboto Condensed", sans-serif; // Replace with your desired display font
+$font-family-lead: "Roboto", sans-serif; // Replace with your desired lead font
+$font-family-base: "Roboto", sans-serif;
 
 // Step 3: Override Bootstrap's typography variables
 $display-font-family: $font-family-display;

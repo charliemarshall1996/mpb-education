@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-{% extends "students/base.html" %}
-{% load static %}
-{% block pagecontent %}
+<!doctype html>
+{% extends "students/base.html" %} {% load static %} {% block pagecontent %}
 <div class="container">
-    <div class="row justify-content-center py-3">
-        <div class="col-10">
-            <h1>Delete Guardian</h1>
-        </div>
+  <div class="row justify-content-center py-3">
+    <div class="col-10">
+      <h1>Delete Guardian</h1>
     </div>
-    <div class="row justify-content-center py-3">
-        <div class="col-10">
-            {% load crispy_forms_tags %}
-            <form method="post">{% csrf_token %}
-                <p>Are you sure you want to delete "{{ object }}"?</p>
-                {{ form }}
-                <input type="submit" value="Confirm">
-            </form>
-        </div>
+  </div>
+  <div class="row justify-content-center py-3">
+    <div class="col-10">
+      {% load crispy_forms_tags %}
+      <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        {{ form }}
+        <input type="submit" value="Confirm" />
+      </form>
     </div>
+  </div>
 </div>
 {% endblock %}

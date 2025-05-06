@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="#">
+	<meta property="og:image" content="{% static 'core/images/hero.jpg' %}">
+	<meta property="og:site_name" content="MPB Education">
+	<link rel="canonical" href="#">
 	{% block metatags %}{% endblock %}
     <title>MPB Education</title>
 
@@ -21,6 +26,7 @@
 	<link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
 	<link rel="stylesheet" href="{% static 'core/css/core.css' %}">
 
+	
     {% block styles %}{% endblock %}
 </head>
 <body class="body-light">
